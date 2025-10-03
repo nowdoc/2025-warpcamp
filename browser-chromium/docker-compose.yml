@@ -1,0 +1,15 @@
+services:
+  chrome:
+    image: lscr.io/linuxserver/chrome:latest
+    platform: linux/amd64
+    restart: unless-stopped
+    shm_size: "2gb"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Prague
+    volumes:
+      - .docker/config:/config
+    ports:
+      - "3000:3000"   # HTTP (proxy this)
+      - "3001:3001"   # HTTPS (primary)
