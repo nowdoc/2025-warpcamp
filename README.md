@@ -26,3 +26,10 @@
 - [mcp-atlassian](mcp-atlassian/)
 - [mcp-browser](mcp-browser/)
 - [mcp-hub](mcp-hub/)
+
+## Resources
+
+- [neko](https://github.com/m1k1o/neko)
+- [stagehand](https://github.com/browserbase/stagehand)
+- [kasm](https://kasm.com/)
+- [mcphub](https://github.com/samanhappy/mcphub)
