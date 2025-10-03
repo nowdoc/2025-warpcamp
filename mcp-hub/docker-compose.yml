@@ -1,0 +1,11 @@
+services:
+  mcphub:
+    image: samanhappy/mcphub:latest
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./mcp.json:/app/mcp_settings.json
+      - ./.docker/data:/app/data
+    environment:
+      - TZ=Europe/Prague
