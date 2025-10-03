@@ -1,0 +1,12 @@
+services:
+  mcp-atlassian:
+    image: ghcr.io/sooperset/mcp-atlassian:latest
+    ports:
+      - "19000:9000"
+    environment:
+      - CONFLUENCE_URL=${CONFLUENCE_URL}
+      - CONFLUENCE_API_TOKEN=${CONFLUENCE_API_TOKEN}
+      - CONFLUENCE_USERNAME=${CONFLUENCE_USERNAME}
+      - READ_ONLY_MODE=${READ_ONLY_MODE}
+    command: >
+      --transport streamable-http --port 9000 -vv
